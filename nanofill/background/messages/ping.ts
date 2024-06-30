@@ -2,7 +2,10 @@
 import type { PlasmoMessaging } from "@plasmohq/messaging"
 
 const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
-    const message = "hllo"
+    console.log('AHHHHH')
+    console.log(req)
+    console.log(res)
+    const message = `This is a message: ${req.body.data}`
     // Send message to content script
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         if (tabs[0].id) {

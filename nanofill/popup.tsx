@@ -14,7 +14,7 @@ function IndexPopup() {
       const resp = await sendToBackground({
         name: "ping",
         body: {
-          id: 123
+          data
         }
       })
       console.log('Response from background:', resp)
